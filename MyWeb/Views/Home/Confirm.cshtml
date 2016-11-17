@@ -1,0 +1,23 @@
+﻿@model MyWeb.Models.AzureStorage
+
+@{
+    ViewBag.Title = "Azure Storage Cost";
+}
+
+<h2>Cost</h2>
+
+<fieldset>
+    <legend>Azure Storage Cost</legend>
+
+    <div class="display-label">Avg GB Storage per month: @Html.DisplayFor(model => model.Storage)</div>
+
+    <div class="display-label">Redundancy:  @Html.DisplayFor(model => model.Redundancy)</div>
+
+    <div class="display-label">Cost: $ @Html.DisplayFor(model => model.Cost)</div>
+    <div class="display-field">
+
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Calculate More", "Calculate")
+</p>
